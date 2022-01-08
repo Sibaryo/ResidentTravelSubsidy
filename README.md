@@ -1,7 +1,6 @@
 Opdracht 1": "Form picker" staat in de class App/Console/Commands/FormPicker
 
-Opdracht 2: "Verdelen van verzamelingen" staat in de class App/Console.Commands/SplitUpListNumbers (Ik snap de opdracht waarschijnlijk niet helemaal)
-array_splice($array, $limit)
+Opdracht 2: "Verdelen van verzamelingen" staat in de class App/Console.Commands/SplitUpListNumbers
 
 Opdracht 3: "Maandagen in een periode" staat in de class App/Console/Commands/MondayCalculator
 
