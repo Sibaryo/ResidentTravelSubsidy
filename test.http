@@ -1,0 +1,59 @@
+### ALL Residents
+GET http://127.0.0.1:8000/api/residents
+
+### SINGLE Resident
+GET http://127.0.0.1:8000/api/residents/2
+
+### STORE Resident
+POST http://127.0.0.1:8000/api/residents
+Content-Type: application/json
+
+{
+    "address": {
+        "street_name": "Godebaldkwartier",
+        "house_number": "54",
+        "zipcode": "3511DX",
+        "city": "Utrecht"
+    },
+    "name": "Johnny Bravo",
+    "email": "Johnny@gmail.com",
+    "phone_number": "061234578"
+}
+
+### ALL Rides
+GET http://127.0.0.1:8000/api/rides/
+
+### SINGLE Ride
+GET http://127.0.0.1:8000/api/rides/1
+
+### STORE Ride
+POST http://127.0.0.1:8000/api/rides/
+Content-Type: application/json
+
+{
+    "resident": {
+        "address": {
+            "street_name": "Godebaldkwartier",
+            "house_number": "54",
+            "zipcode": "3511DX",
+            "city": "Utrecht"
+        },
+        "name": "Johnny Bravo",
+        "email": "Johnny@gmail.com",
+        "phone_number": "061234578"
+    },
+    "pickup_address": {
+        "street_name": "Godebaldkwartier",
+        "house_number": "54",
+        "zipcode": "3511DX",
+        "city": "Utrecht"
+    },
+    "drop_off_address": {
+        "street_name": "Berlijnplein",
+        "house_number": "100",
+        "zipcode": " 3541CM",
+        "city": "Utrecht"
+    },
+    "distance": 6,
+    "pickup_date": "2022-01-10 11:08:34"
+}
