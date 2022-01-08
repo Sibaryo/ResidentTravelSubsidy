@@ -26,6 +26,26 @@ GET http://127.0.0.1:8000/api/rides/
 ### SINGLE Ride
 GET http://127.0.0.1:8000/api/rides/1
 
+### STORE TravelSubsidy
+POST http://127.0.0.1:8000/api/travel_subsidies/
+Content-Type: application/json
+
+{
+    "resident": {
+        "address": {
+            "street_name": "Godebaldkwartier",
+            "house_number": "54",
+            "zipcode": "3511DX",
+            "city": "Utrecht"
+        },
+        "name": "Johnny Bravo",
+        "email": "Johnny@gmail.com",
+        "phone_number": "061234578"
+    },
+    "distance": 1000,
+    "active": 1
+}
+
 ### STORE Ride
 POST http://127.0.0.1:8000/api/rides/
 Content-Type: application/json

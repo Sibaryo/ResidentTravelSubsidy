@@ -17,8 +17,7 @@ class TravelSubsidyResource extends JsonResource
         return [
             'resident'   => new ResidentResource($this->resident),
             'distance'   => $this->distance,
-            'active'     => $this->active,
-            'created_at' => $this->createdAt
+            'active'     => $this->active
         ];
     }
 }

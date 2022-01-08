@@ -31,7 +31,7 @@ class RideController extends Controller
         ]);
 
         if ($validate->fails()) {
-            return response(['status_code' => 400, 'errors'      => $validate->errors()], 400);
+            return response(['status_code' => 400, 'errors' => $validate->errors()], 400);
         }
 
         $address = Address::getExistingAddress($request->input('resident.address.house_number'), $request->input('resident.address.zipcode'));

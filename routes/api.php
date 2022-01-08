@@ -3,6 +3,7 @@
 use App\Http\Controllers\AddressController;
 use App\Http\Controllers\ResidentController;
 use App\Http\Controllers\RideController;
+use App\Http\Controllers\TravelSubsidyController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,5 +20,6 @@ use Illuminate\Support\Facades\Route;
 Route::apiResources([
                         'residents'        => ResidentController::class,
                         'rides'            => RideController::class,
-                        'addresses'        => AddressController::class
+                        'addresses'        => AddressController::class,
+                        'travel_subsidies' => TravelSubsidyController::class
                     ]);
