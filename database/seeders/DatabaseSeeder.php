@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Company;
 use App\Models\Resident;
 use App\Models\Ride;
 use App\Models\TravelSubsidy;
@@ -17,6 +18,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         Resident::factory(10)->create();
+        Company::factory(2)->create();
         TravelSubsidy::factory(10)->create();
         Ride::factory(20)->create();
     }

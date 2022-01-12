@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRidesTable extends Migration
+class CreateCompaniesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,14 @@ class CreateRidesTable extends Migration
      */
     public function up()
     {
-        Schema::create('rides', function (Blueprint $table) {
+        Schema::create('companies', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('resident_id');
-            $table->foreignId('company_id');
-            $table->foreignId('pickup_address_id');
-            $table->foreignId('drop_off_address_id');
-            $table->integer('distance');
-            $table->dateTime('pickup_date');
+            $table->foreignId('address_id');
+            $table->string('company_name');
+            $table->string('email');
+            $table->string('phone_number');
             $table->timestamps();
+            $table->unique('email');
         });
     }
 
@@ -32,6 +31,6 @@ class CreateRidesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rides');
+        Schema::dropIfExists('companies');
     }
 }

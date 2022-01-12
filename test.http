@@ -77,3 +77,9 @@ Content-Type: application/json
     "distance": 6,
     "pickup_date": "2022-01-10 11:08:34"
 }
+
+### ALL COMPANIES
+GET http://127.0.0.1:8000/api/companies
+
+### SINGLE Resident
+GET http://127.0.0.1:8000/api/companies/2

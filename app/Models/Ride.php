@@ -14,6 +14,7 @@ class Ride extends Model
     protected $table = 'rides';
     protected $fillable = [
         'resident_id',
+        'company_id',
         'pickup_address_id',
         'drop_off_address_id',
         'distance',
@@ -23,6 +24,11 @@ class Ride extends Model
     public function resident(): BelongsTo
     {
         return $this->belongsTo(Resident::class);
+    }
+
+    public function company(): BelongsTo
+    {
+        return $this->belongsTo(Company::class);
     }
 
     public function pickupAddress(): HasOne

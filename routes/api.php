@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AddressController;
+use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\ResidentController;
 use App\Http\Controllers\RideController;
 use App\Http\Controllers\TravelSubsidyController;
@@ -21,5 +22,6 @@ Route::apiResources([
                         'residents'        => ResidentController::class,
                         'rides'            => RideController::class,
                         'addresses'        => AddressController::class,
-                        'travel_subsidies' => TravelSubsidyController::class
+                        'travel_subsidies' => TravelSubsidyController::class,
+                        'companies'        => CompanyController::class,
                     ]);

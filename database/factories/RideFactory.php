@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Address;
+use App\Models\Company;
 use App\Models\Resident;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -15,6 +16,7 @@ class RideFactory extends Factory
     {
         return [
             'resident_id'         => $this->faker->numberBetween(1, Resident::count()),
+            'company_id'          => $this->faker->numberBetween(1, Company::count()),
             'pickup_address_id'   => Address::factory(),
             'drop_off_address_id' => Address::factory(),
             'distance'            => $this->faker->numberBetween(1, 100),
